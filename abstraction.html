@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>abstraction</title>
+</head>
+
+<body>
+ <script>
+  function Person() {
+    this.name = "Alex";
+    if (this.constructor === Person) {
+     throw new Error("Your Error Message...");
+    }
+};
+Person.prototype.info = function () {
+    return "Person name is: " + this.name;
+}
+function Teacher(name) {
+    this.name = name;
+}
+
+Teacher.prototype = Object.create(Person.prototype);
+var teacher1 = new Teacher("Stepheny");
+console.log(teacher1.info());
+ </script> 
+</body>
+</html>
