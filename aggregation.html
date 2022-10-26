@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aggregation</title>
+</head>
+<body>
+  <script>
+        class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  eat() {
+      
+  }
+}
+class Author extends Person {
+  constructor(name, genre) {
+    super(name);
+    this.genre = genre;
+  }
+  eat() {
+    super.eat();
+  }
+  write() {
+    console.log(`${super.name} is writing`)
+  }
+}
+  </script>
+</body>
+</html>
