@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>composition</title>
+</head>
+<body>
+  <script>
+      function words( text ){
+  return String( text )
+    .toLowerCase()
+    .split(/\s/)
+}
+
+function shortUpper( words ){
+  return words.map( word => {
+    if( word.length < 5 ){
+      return word.toUpperCase()
+    } else {
+      return word
+    }
+  })
+}
+
+function createText( array ){
+  return array.join(' ')
+}
+const text = 'Hello! My name is Adela.'
+//}
+function upperLessThan5( text ){
+  return createText( shortUpper( words( text ) ) )
+}
+
+const newText = upperLessThan5( text )
+
+console.log(newText)
+  </script>
+  
+</body>
+</html>
