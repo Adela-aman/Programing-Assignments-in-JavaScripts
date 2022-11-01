@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bigdecimal</title>
+</head>
+<body>
+  <script>
+var bigdecimal = require("bigdecimal");
+
+var i = new bigdecimal.BigInteger("1234567890abcdefghijklmn", 24);
+console.log("i is " + i);
+
+
+var d = new bigdecimal.BigDecimal(i);
+var x = new bigdecimal.BigDecimal("123456.123456789012345678901234567890");
+console.log("d * x = " + d.multiply(x));
+
+
+var two = new bigdecimal.BigDecimal('2');
+console.log("Average = " + d.add(x).divide(two));
+
+
+var down = bigdecimal.RoundingMode.DOWN();
+console.log("d / x (25 decimal places) = " + d.divide(x, 25, DOWN));
+
+  </script>
+  
+</body>
+</html>
