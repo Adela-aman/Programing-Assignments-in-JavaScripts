@@ -1,2 +1,2 @@
-# Random-password-generator-project
-this is a JavaScript project for generating passwords
+assignments of advance programming 
+all advance programming concepts are implemented in javascript
